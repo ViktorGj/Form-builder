@@ -1,0 +1,30 @@
+.pre {
+  position: fixed;
+  left: 5px;
+  bottom: 5px;
+  width: 240px;
+  height: 400px;
+  border: 1px solid grey;
+  background: #fff;
+  z-index: 10000;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.position-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+}
+
+.position-relative {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1000;
+}

@@ -1,0 +1,38 @@
+@mixin intrinsic($width: 1, $height: 1) {
+
+	position: relative;
+	overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    padding-top: percentage($height/$width); 
+  }
+}
+
+@mixin intrinsic-item($fit: false) {
+  position: absolute;
+  width: 100%;
+
+  @if $fit {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    object-fit: $fit;
+  }
+
+  @else {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @if $fit == 'vertical' {
+    height: 100%;
+  }
+  @if $fit == 'horizontal' {
+    width: 100%;
+  }
+}

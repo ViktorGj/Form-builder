@@ -1,0 +1,24 @@
+$primary-color: red;
+$secondary-color: pink; 
+$basic-color:#666;
+$text-color: #424242;
+$success-color: #5CB85C;
+$warning-color: #FF8811;
+$danger-color: #d9534f;
+$info-color: #5bc0de;
+$default-color: #f9f9f9;
+$fill-color: #ebebeb;
+$border-color: #dbdbdb;
+
+//Bootstrap 4 theme colors
+$theme-colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  info: $info-color,
+  warning: $warning-color,
+  danger: $danger-color,
+  default: $basic-color
+);
+
+$color-threshold: 10%;

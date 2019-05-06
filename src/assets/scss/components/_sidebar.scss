@@ -1,0 +1,13 @@
+.#{$prefix}-sidebar{
+    &__wrap{
+        padding: 20px;
+        background: #e2e2e2;
+    }
+    &__list{
+        list-style: none;
+        &-item{
+            color: green;
+            font-weight: 900;
+        }
+    }
+}
