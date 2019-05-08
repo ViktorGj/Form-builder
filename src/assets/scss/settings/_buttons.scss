@@ -1,2 +1,8 @@
-$btn-border-radius: $radius;
-$btn-font-weight: $font-weight-normal;
+$btn-border-radius: 2px;
+$btn-font-weight: 600;
+$btn-border-width: 1px;
+$btn-font-size: .875rem;
+$btn-line-height: 1;
+$btn-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+$btn-padding-y: 10px;
+$btn-padding-x: 15px ;
