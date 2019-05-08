@@ -1,1 +1,16 @@
 $font-weight-normal: 700;
+
+.text-secondary {
+  color: $gray-500 !important;
+}
+
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger,
+.bg-dark {
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+}

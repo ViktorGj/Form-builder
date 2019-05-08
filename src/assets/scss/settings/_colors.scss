@@ -1,77 +1,50 @@
-// $primary-color: rgb(147, 182, 218);
-// $secondary-color: pink; 
-// $basic-color:#666;
-// $text-color: #424242;
-// $success-color: #5CB85C;
-// $warning-color: #FF8811;
-// $danger-color: #d9534f;
-// $info-color: #5bc0de;
-//-color: #f9f9f9;
-// $fill-color: #ebebeb;
-// $border-color: #dbdbdb;
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
 
-//Bootstrap 4 theme colors
-// $theme-colors: (
-//   primary: $primary-color,
-//   secondary: $secondary-color,
-//   success: $success-color,
-//   info: $info-color,
-//   warning: $warning-color,
-//   danger: $danger-color,
-// : $basic-color,
-//   my: blue
-// );
+$blue:    #033C73 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #C71C22 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #DD5600 !default;
+$green:   #73A839 !default;
+$teal:    #20c997 !default;
+$cyan:    #2FA4E7 !default;
 
-// $color-threshold: 10%;
-
-
-$white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #868e96;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
-$black:    #000;
-
-$blue:    #033C73;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #C71C22;
-$orange:  #fd7e14;
-$yellow:  #DD5600;
-$green:   #73A839;
-$teal:    #20c997;
-$cyan:    #2FA4E7;
-
-$primary:       $cyan;
-$secondary:     $gray-200;
-$success:       $green;
-$info:          $blue;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-800;
+$primary:       $cyan !default;
+$secondary:     $gray-200 !default;
+$success:       $green !default;
+$info:          $blue !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
 
 // Body
 
-$body-color:    $gray-700;
+$body-color:    $gray-700 !default;
 
 // Fonts
 
-$headings-color:         $cyan;
+$headings-color:         $cyan !default;
 
 // Dropdowns
 
-$dropdown-link-color:            $body-color;
-$dropdown-link-hover-color:      $white;
-$dropdown-link-hover-bg:         $primary;
+$dropdown-link-color:            $body-color !default;
+$dropdown-link-hover-color:      $white !default;
+$dropdown-link-hover-bg:         $primary !default;
 
 // Navbar
 
-$navbar-dark-color:                 rgba($white,.8);
-$navbar-dark-hover-color:           $white;
+$navbar-dark-color:                 rgba($white,.8) !default;
+$navbar-dark-hover-color:           $white !default;

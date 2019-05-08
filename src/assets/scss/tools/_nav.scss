@@ -1,0 +1,11 @@
+.bg-primary {
+  @include btn-shadow($primary);
+}
+
+.bg-dark {
+  @include btn-shadow($blue);
+}
+
+.bg-light {
+  @include gradient-y-three-colors(lighten($gray-200, 8%), $gray-200, 60%, darken($gray-200, 2%));
+}
