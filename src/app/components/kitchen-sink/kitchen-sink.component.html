@@ -2,246 +2,172 @@
 
 
 <div class="container">
-    <div>
-        <h1>Buttons:</h1>
-    </div>
+  <div>
+    <h1>Buttons:</h1>
+  </div>
 
-    <div>
-        <h4>Basic</h4>
-        <button type="button" class="btn btn-primary ml-1">Primary</button>
-        <button type="button" class="btn btn-secondary ml-1">Secondary</button>
-        <button type="button" class="btn btn-success ml-1">Success</button>
-        <button type="button" class="btn btn-info ml-1">Info</button>
-        <button type="button" class="btn btn-warning ml-1">Warning</button>
-        <button type="button" class="btn btn-danger ml-1">Danger</button>
-        <button type="button" class="btn btn-link ml-1">Link</button>
+  <div>
+    <h4>Basic</h4>
+    <button type="button" class="btn btn-primary ml-1">Primary</button>
+    <button type="button" class="btn btn-secondary ml-1">Secondary</button>
+    <button type="button" class="btn btn-success ml-1">Success</button>
+    <button type="button" class="btn btn-info ml-1">Info</button>
+    <button type="button" class="btn btn-warning ml-1">Warning</button>
+    <button type="button" class="btn btn-danger ml-1">Danger</button>
+    <button type="button" class="btn btn-link ml-1">Link</button>
+  </div>
+  <hr>
+  <div>
+    <h4>Disabled</h4>
+    <button type="button" class="btn btn-primary disabled ml-1">Primary</button>
+    <button type="button" class="btn btn-secondary disabled ml-1">Secondary</button>
+    <button type="button" class="btn btn-success disabled ml-1">Success</button>
+    <button type="button" class="btn btn-info disabled ml-1">Info</button>
+    <button type="button" class="btn btn-warning disabled ml-1">Warning</button>
+    <button type="button" class="btn btn-danger disabled ml-1">Danger</button>
+    <button type="button" class="btn btn-link disabled ml-1">Link</button>
+  </div>
+  <hr>
+  <div>
+    <h4>Outline</h4>
+    <button type="button" class="btn btn-outline-primary ml-1">Primary</button>
+    <button type="button" class="btn btn-outline-secondary ml-1">Secondary</button>
+    <button type="button" class="btn btn-outline-success ml-1">Success</button>
+    <button type="button" class="btn btn-outline-info ml-1">Info</button>
+    <button type="button" class="btn btn-outline-warning ml-1">Warning</button>
+    <button type="button" class="btn btn-outline-danger ml-1">Danger</button>
+  </div>
+  <hr>
+
+  <div>
+    <h4>DropDown</h4>
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
+      <button type="button" class="btn btn-primary ml-1">Primary</button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="#">Dropdown link</a>
+          <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
+      <button type="button" class="btn btn-success ml-1">Success</button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
+          <a class="dropdown-item" href="#">Dropdown link</a>
+          <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
+      <button type="button" class="btn btn-info ml-1">Info</button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
+          <a class="dropdown-item" href="#">Dropdown link</a>
+          <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
+      <button type="button" class="btn btn-danger ml-1">Danger</button>
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop4" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"></button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop4">
+          <a class="dropdown-item" href="#">Dropdown link</a>
+          <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+      </div>
     </div>
     <hr>
     <div>
-        <h4>Disabled</h4>
-        <button type="button" class="btn btn-primary disabled ml-1">Primary</button>
-        <button type="button" class="btn btn-secondary disabled ml-1">Secondary</button>
-        <button type="button" class="btn btn-success disabled ml-1">Success</button>
-        <button type="button" class="btn btn-info disabled ml-1">Info</button>
-        <button type="button" class="btn btn-warning disabled ml-1">Warning</button>
-        <button type="button" class="btn btn-danger disabled ml-1">Danger</button>
-        <button type="button" class="btn btn-link disabled ml-1">Link</button>
+      <h4>All sizes</h4>
+      <button type="button" class="btn btn-primary btn-lg ml-1">Large button</button>
+      <button type="button" class="btn btn-primary ml-1">Default button</button>
+      <button type="button" class="btn btn-primary btn-sm ml-1">Small button</button>
     </div>
     <hr>
-
+    <!-- TYPOGRAPHY -->
     <div>
-        <h4>DropDown</h4>
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-            <button type="button" class="btn btn-primary ml-1">Primary</button>
-            <div class="btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                </div>
-            </div>
-        </div>
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-            <button type="button" class="btn btn-success ml-1">Success</button>
-            <div class="btn-group" role="group">
-                <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                </div>
-            </div>
-        </div>
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-            <button type="button" class="btn btn-info ml-1">Info</button>
-            <div class="btn-group" role="group">
-                <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                </div>
-            </div>
-        </div>
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-            <button type="button" class="btn btn-danger ml-1">Danger</button>
-            <div class="btn-group" role="group">
-                <button id="btnGroupDrop4" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                <div class="dropdown-menu" aria-labelledby="btnGroupDrop4">
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                    <a class="dropdown-item" href="#">Dropdown link</a>
-                </div>
-            </div>
-        </div>
+      <h1>Typography</h1>
+    </div>
+    <div>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <h3>
+        Heading
+        <small class="text-muted">with muted text</small>
+      </h3>
+      <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    </div>
+    <hr>
+    <!-- FORMS -->
+    <div>
+      <h1>Forms</h1>
+    </div>
+    <div class="row">
+      <div class="col-7-md">
+        <form>
+          <fieldset>
 
-        <div>
-            <h4>Basic</h4>
-            <button type="button" class="btn btn-primary ml-1">Primary</button>
-            <button type="button" class="btn btn-secondary ml-1">Secondary</button>
-            <button type="button" class="btn btn-success ml-1">Success</button>
-            <button type="button" class="btn btn-info ml-1">Info</button>
-            <button type="button" class="btn btn-warning ml-1">Warning</button>
-            <button type="button" class="btn btn-danger ml-1">Danger</button>
-            <button type="button" class="btn btn-link ml-1">Link</button>
-        </div>
-        <hr>
-        <div>
-            <h4>Disabled</h4>
-            <button type="button" class="btn btn-primary disabled ml-1">Primary</button>
-            <button type="button" class="btn btn-secondary disabled ml-1">Secondary</button>
-            <button type="button" class="btn btn-success disabled ml-1">Success</button>
-            <button type="button" class="btn btn-info disabled ml-1">Info</button>
-            <button type="button" class="btn btn-warning disabled ml-1">Warning</button>
-            <button type="button" class="btn btn-danger disabled ml-1">Danger</button>
-            <button type="button" class="btn btn-link disabled ml-1">Link</button>
-        </div>
-        <hr>
-        <div>
-            <h4>Outline</h4>
-            <button type="button" class="btn btn-outline-primary ml-1">Primary</button>
-            <button type="button" class="btn btn-outline-secondary ml-1">Secondary</button>
-            <button type="button" class="btn btn-outline-success ml-1">Success</button>
-            <button type="button" class="btn btn-outline-info ml-1">Info</button>
-            <button type="button" class="btn btn-outline-warning ml-1">Warning</button>
-            <button type="button" class="btn btn-outline-danger ml-1">Danger</button>
-        </div>
-        <hr>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
 
-        <div>
-            <h4>DropDown</h4>
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-                <button type="button" class="btn btn-primary ml-1">Primary</button>
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-                <button type="button" class="btn btn-success ml-1">Success</button>
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop2" type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop2">
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-                <button type="button" class="btn btn-info ml-1">Info</button>
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop3" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop3">
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown ml-1">
-                <button type="button" class="btn btn-danger ml-1">Danger</button>
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop4" type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop4">
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div>
-                <h4>All sizes</h4>
-                <button type="button" class="btn btn-primary btn-lg ml-1">Large button</button>
-                <button type="button" class="btn btn-primary ml-1">Default button</button>
-                <button type="button" class="btn btn-primary btn-sm ml-1">Small button</button>
-            </div>
 
             <div class="form-group">
               <label for="exampleTextarea">Example textarea</label>
               <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
             </div>
             <hr>
-            <!-- Radio Buttons and CheckBox -->
-            <div class="row">
-              <div class="col-md-6">
-                <div class="card card-block">
-                  <div class="title-block">
-                    <h3 class="title"> Radio Buttons </h3>
-                  </div>
-                  <form>
-                    <div class="form-group">
-                      <div>
-                        <label>
-                          <input class="radio" name="radios" type="radio">
-                          <span>Option one</span>
-                        </label>
-                      </div>
-                      <div>
-                        <label>
-                          <input class="radio" type="radio" name="radios" checked="checked">
-                          <span>Option two checked</span>
-                        </label>
-                      </div>
-                      <div>
-                        <label>
-                          <input class="radio" type="radio" name="disabled-radios" disabled="disabled"
-                            checked="checked">
-                          <span>Option three checked and disabled</span>
-                        </label>
-                      </div>
-                      <div>
-                        <label>
-                          <input class="radio" type="radio" name="disabled-radios" disabled="disabled">
-                          <span>Option four disabled</span>
-                        </label>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-
-              <div class="col-md-6">
-                <div class="card card-block">
-                  <div class="title-block">
-                    <h3 class="title"> Checkboxe Types </h3>
-                  </div>
-                  <form role="form">
-                    <div class="form-group">
-                      <label class="control-label">Checkboxes</label>
-                      <div>
-                        <label>
-                          <input class="checkbox" type="checkbox">
-                          <span>Option one</span>
-                        </label>
-                      </div>
-                      <div>
-                        <label>
-                          <input class="checkbox" type="checkbox" checked="checked">
-                          <span>Option two checked</span>
-                        </label>
-                      </div>
-                      <div>
-                        <label>
-                          <input class="checkbox" type="checkbox" disabled="disabled" checked="checked">
-                          <span>Option three checked and disabled</span>
-                        </label>
-                      </div>
-                      <div>
-                        <label>
-                          <input class="checkbox" type="checkbox" disabled="disabled">
-                          <span>Option four disabled</span>
-                        </label>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-
             <button type="submit" class="btn btn-primary">Submit</button>
-        
-        
+          </fieldset>
+        </form>
+      </div>
+      <div class="div">
+          <fieldset class="form-group">
+              <h4>Radio buttons</h4>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend>Checkboxes</legend>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+              </div>
+              <div class="form-check disabled">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" value="" disabled="">
+                  Option two is disabled
+                </label>
+              </div>
+            </fieldset>
       </div>
       <div class="col-5-md">
         <div class="form-group">
@@ -266,283 +192,373 @@
           <input type="text" value="wrong value" class="form-control is-invalid" id="inputInvalid">
           <div class="invalid-feedback">Sorry, that username's taken. Try another?</div>
         </div>
+      </div>
+    </div>
+    <hr>
+    <!-- PAGINATION -->
+    <div>
+      <h1>Pagination</h1>
+    </div>
+    <div>
+      <div>
+        <ul class="pagination">
+          <li class="page-item disabled">
+            <a class="page-link" href="#">&laquo;</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">5</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="pagination pagination-sm">
+          <li class="page-item disabled">
+            <a class="page-link" href="#">&laquo;</a>
+          </li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">5</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#">&raquo;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <!-- BREADCRUMB -->
+    <div>
+      <h1>Breadcrumb</h1>
+    </div>
+    <div>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active">Home</li>
+      </ol>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active">Library</li>
+      </ol>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active">Data</li>
+      </ol>
+    </div>
+  </div>
 
 
-        <hr>
-        <!-- BREADCRUMB -->
-        <div>
-            <h1>Breadcrumb</h1>
-        </div>
-        <div>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active">Home</li>
-            </ol>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">Library</li>
-            </ol>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                <li class="breadcrumb-item active">Data</li>
-            </ol>
-        </div>
+  <hr>
+  <!-- BREADCRUMB -->
+  <div>
+    <h1>Breadcrumb</h1>
+  </div>
+  <div>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active">Home</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active">Library</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="#">Library</a></li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+  </div>
 
-        <hr>
-        <!-- ALERT-->
-        <div>
-            <h1>Alert</h1>
+  <hr>
+  <!-- ALERT-->
+  <div>
+    <h1>Alert</h1>
+  </div>
+  <div>
+    <div class="alert alert-dismissible alert-warning">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <h4 class="alert-heading">Warning!</h4>
+      <p class="mb-0">Best check y, <a href="#" class="alert-link">vel scelertetur et</a>.</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-4">
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> ann.
         </div>
-        <div>
-            <div class="alert alert-dismissible alert-warning">
-                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <h4 class="alert-heading">Warning!</h4>
-                <p class="mb-0">Best check y, <a href="#" class="alert-link">vel scelertetur et</a>.</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="alert alert-dismissible alert-danger">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> ann.
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="alert alert-dismissible alert-success">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Well done!</strong> You read <a href="#" class="alert-link">this i
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="alert alert-dismissible alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Well done!</strong> You read <a href="#" class="alert-link">this i
             message</a>.
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                    <div class="alert alert-dismissible alert-success">
-                        <button type="button" class="close" data-dismiss="alert">&times;</button>
-                        <strong>Well done!</strong> You sead <a href="#" class="alert-link">thrt
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4">
+        <div class="alert alert-dismissible alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong>Well done!</strong> You sead <a href="#" class="alert-link">thrt
             message</a>.
-                    </div>
-                </div>
-            </div>
         </div>
-        <hr>
-        <!-- LIST GROUP-->
-        <div>
-            <h1>List Group</h1>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- LIST GROUP-->
+  <div>
+    <h1>List Group</h1>
+  </div>
+  <div>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Cras justo odio
+        <span class="badge badge-primary badge-pill">14</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Dapibus ac facilisis in
+        <span class="badge badge-primary badge-pill">2</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Morbi leo risus
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <!-- Cards-->
+  <div>
+    <h1>Cards</h1>
+  </div>
+  <h4>Basic</h4>
+  <div class="row">
+    <div class="col-md-4 mb-1">
+      <div class="card text-white bg-primary">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Primary card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
         </div>
-        <div>
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Cras justo odio
-                    <span class="badge badge-primary badge-pill">14</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Dapibus ac facilisis in
-                    <span class="badge badge-primary badge-pill">2</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Morbi leo risus
-                    <span class="badge badge-primary badge-pill">1</span>
-                </li>
-            </ul>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card text-white bg-secondary">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Secondary card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
         </div>
-        <hr>
-        <!-- Cards-->
-        <div>
-            <h1>Cards</h1>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card text-white bg-success">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Success card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
         </div>
-        <h4>Basic</h4>
-        <div class="row">
-            <div class="col-md-4 mb-1">
-                <div class="card text-white bg-primary">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card text-white bg-secondary">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Secondary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card text-white bg-success">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Success card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card text-white bg-danger">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Danger card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card text-white bg-warning">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Warning card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card text-white bg-info">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Info card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card bg-light">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Light card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card text-white bg-dark">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Dark card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card text-white bg-danger">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Danger card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
         </div>
-        <h4>Outline</h4>
-        <div class="row">
-            <div class="col-md-4 mb-1">
-                <div class="card border-primary">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Primary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card border-secondary">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Secondary card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card border-success">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Success card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card border-danger">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Danger card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card border-warning">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Warning card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card border-info">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Info card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card border-light">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Light card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-1">
-                <div class="card border-dark">
-                    <div class="card-header">Header</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Dark card title</h4>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card text-white bg-warning">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Warning card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
         </div>
-        <hr>
-        <!-- MODALS-->
-        <div>
-            <h1>Modals</h1>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card text-white bg-info">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Info card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
         </div>
-        <div class="mod">
-            <div class="modal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card bg-light">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Light card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card text-white bg-dark">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Dark card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h4>Outline</h4>
+  <div class="row">
+    <div class="col-md-4 mb-1">
+      <div class="card border-primary">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Primary card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card border-secondary">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Secondary card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card border-success">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Success card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card border-danger">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Danger card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card border-warning">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Warning card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card border-info">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Info card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card border-light">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Light card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-1">
+      <div class="card border-dark">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+          <h4 class="card-title">Dark card title</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+            card's content.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <!-- MODALS-->
+  <div>
+    <h1>Modals</h1>
+  </div>
+  <div class="mod">
+    <div class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>Modal body text goes here.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
+      </div>
     </div>
-<<<<<<< HEAD
   </div>
 </div>
-=======
->>>>>>> cad46b388099daec9ab35eb0bfc0c8626ea9b866
