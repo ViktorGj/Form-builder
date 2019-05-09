@@ -4,7 +4,9 @@ $prefix: 'fb';
 $gutter-top: 45px;
 $transition-speed: 0.3s;
 $transition-style: ease-in-out;
-$radius: 0px;
+
+//buttons radius
+$radius: 5px;
 // $brand-gradient-linear: linear-gradient(270deg, $brand-color 0%, $primary-color 100%);
 // $default-gradient-linear: linear-gradient(90deg, rgba(245, 244, 244, 1) 30%, rgba(255, 255, 255, 0) 100%);
 // $default-alt-gradient-linear: linear-gradient(180deg, rgba(245, 244, 244, 1) 30%, rgba(255, 255, 255, 0) 100%);
