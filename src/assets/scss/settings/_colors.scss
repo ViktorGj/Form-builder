@@ -1,23 +1,26 @@
-
-
 $blue-dark: #346089;
-$blue: #2191FB;
-$purple:  #706A96;
-$red:     #C12A2F;
-$yellow:  #E5D352;
-$green:   #53DD6C;
-$gray-light: #F0F3F6;
-$gray-dark:         #383D3B;
+$blue: #2191fb;
+$purple: #706a96;
+$red: #c12a2f;
+$yellow: #e5d352;
+$green: #53dd6c;
+$gray-light: #f0f3f6;
+$gray-dark: #383d3b;
 
-$primary:       $blue-dark;
-$secondary:     $purple;
-$success:       $green;
-$info:          $blue;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-light;
-$dark:          $gray-dark;
+$primary: $blue-dark;
+$secondary: $purple;
+$success: $green;
+$info: $blue;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-light;
+$dark: $gray-dark;
 
+$theme-colors: (
+  (
+  "white": #fff
+
+  ));
 
 // // Body
 
