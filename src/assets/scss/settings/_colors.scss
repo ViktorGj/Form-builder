@@ -1,34 +1,23 @@
-// $white:    #fff;
-// $gray-100: #f8f9fa;
-// $gray-200: #e9ecef;
-// $gray-300: #dee2e6;
-// $gray-400: #ced4da;
-// $gray-500: #adb5bd;
-// $gray-600: #868e96;
-// $gray-700: #495057;
-// $gray-800: #343a40;
-// $gray-900: #212529;
-// $black:    #000;
 
-// $blue:    #033C73;
-// $indigo:  #6610f2;
-// $purple:  #6f42c1;
-// $pink:    #e83e8c;
-// $red:     #C71C22;
-// $orange:  #fd7e14;
-// $yellow:  #DD5600;
-// $green:   #73A839;
-// $teal:    #20c997;
-// $cyan:    #2FA4E7;
 
-$primary:       #7460ee;
-$secondary:     #6c757d;
-// $success:       $green;
-// $info:          $blue;
-// $warning:       $yellow;
-// $danger:        $red;
-// $light:         $gray-100;
-// $dark:          $gray-800;
+$blue-dark: #346089;
+$blue: #2191FB;
+$purple:  #706A96;
+$red:     #C12A2F;
+$yellow:  #E5D352;
+$green:   #53DD6C;
+$gray-light: #F0F3F6;
+$gray-dark:         #383D3B;
+
+$primary:       $blue-dark;
+$secondary:     $purple;
+$success:       $green;
+$info:          $blue;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-light;
+$dark:          $gray-dark;
+
 
 // // Body
 
