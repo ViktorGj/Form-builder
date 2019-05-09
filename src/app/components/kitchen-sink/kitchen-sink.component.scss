@@ -2,3 +2,32 @@
  display: block;
  position: relative;
 }
+
+.radio, .checkbox {
+  // display: none;
+}
+
+.radio:checked + span:before {
+  content: "\f192";
+}
+.radio:checked + span:before, .checkbox:checked + span:before {
+  color:#62ca96;
+}
+.radio + span:before {
+  content: "\f111";
+}
+.radio + span:before, .checkbox + span:before {
+  font-family: FontAwesome;
+  font-size: 21px;
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: 10px;
+  color: #c8d0da;
+}
+
+.checkbox:checked + span:before {
+  content: "\f14a";
+}
+.checkbox + span:before {
+  content: "\f0c8";
+}
