@@ -1,26 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { PublicModule } from './public/public.module';
+import { SharedModule } from './shared/shared.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
+
 import { KitchenSinkComponent } from './components/kitchen-sink/kitchen-sink.component';
+import { DashboardModule } from './private/dashboard/dashboard.module';
+import { DragAndDropModule } from './private/drag-and-drop/drag-and-drop.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    DashboardComponent,
-    QuestionnaireComponent,
-    NavbarComponent,
     KitchenSinkComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PublicModule,
+    SharedModule,
+    DashboardModule,
+    DragAndDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
