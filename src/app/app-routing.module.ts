@@ -3,12 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './public/login/login.component';
 import { dashboardRoute } from './private/dashboard/dashboard-routing.module';
 import { KitchenSinkComponent } from './components/kitchen-sink/kitchen-sink.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent ,  pathMatch: 'full' },
   { path: 'sink', component: KitchenSinkComponent },
-  ...dashboardRoute
-
+  ...dashboardRoute,
+  { path: 'PageNotFound' , component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'PageNotFound'}
 ];
 
 @NgModule({
