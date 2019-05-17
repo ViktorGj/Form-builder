@@ -12,6 +12,8 @@ import { KitchenSinkComponent } from './components/kitchen-sink/kitchen-sink.com
 import { DashboardModule } from './private/dashboard/dashboard.module';
 import { DragAndDropModule } from './private/drag-and-drop/drag-and-drop.module';
 import { PageWrapperComponent } from './shared/page-wrapper/page-wrapper.component';
+import { UserLayoutModule } from './public/user-layout/user-layout.module';
+import { LoginModule } from './public/login/login.module';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { PageWrapperComponent } from './shared/page-wrapper/page-wrapper.compone
     PublicModule,
     SharedModule,
     DashboardModule,
-    DragAndDropModule
+    DragAndDropModule,
+    UserLayoutModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

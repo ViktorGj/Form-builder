@@ -6,11 +6,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
 import { SavePopUpModule } from './save-pop-up/save-pop-up.module';
 import { SharePopUpModule } from './share-pop-up/share-pop-up.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    PageWrapperComponent
+    PageWrapperComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
