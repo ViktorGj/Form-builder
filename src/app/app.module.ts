@@ -11,12 +11,14 @@ import { AppComponent } from './app.component';
 import { KitchenSinkComponent } from './components/kitchen-sink/kitchen-sink.component';
 import { DashboardModule } from './private/dashboard/dashboard.module';
 import { DragAndDropModule } from './private/drag-and-drop/drag-and-drop.module';
+import { PageWrapperComponent } from './shared/page-wrapper/page-wrapper.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    KitchenSinkComponent
+    KitchenSinkComponent,
+    PageWrapperComponent
   ],
   imports: [
     BrowserModule,
