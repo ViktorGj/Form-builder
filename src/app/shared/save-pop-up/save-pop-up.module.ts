@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharePopUpComponent } from '../share-pop-up/share-pop-up.component';
+import { SavePopUpComponent } from '../save-pop-up/save-pop-up.component';
 
 @NgModule({
-  declarations: [SharePopUpComponent],
+  declarations: [SavePopUpComponent],
   imports: [
     CommonModule
   ]
