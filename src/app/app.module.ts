@@ -26,6 +26,9 @@ import { DragAndDropModule } from './private/drag-and-drop/drag-and-drop.module'
     DashboardModule,
     DragAndDropModule
   ],
+  exports: [
+    SharedModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

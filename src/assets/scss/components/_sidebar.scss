@@ -1,0 +1,27 @@
+#sidebar-right {
+    background-color: #eee;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    right: 0;
+    .form-elements {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .button-margin {
+        margin: 2%;
+    }
+    .cards-dimension {
+        margin: 3%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+#sidebar-left {
+    background-color: #eee;
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    left: 0;
+}
