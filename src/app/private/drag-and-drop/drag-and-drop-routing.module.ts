@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DragAndDropComponent } from './drag-and-drop.component';
 import { AuthGuard } from 'src/app/services/auth.guard';
 
-const dragRoutes: Routes = [
+ export const dragRoutes: Routes = [
     { path: 'builder', component: DragAndDropComponent, canActivate: [AuthGuard] }
 ];
 
