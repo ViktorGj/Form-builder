@@ -8,6 +8,8 @@ import { DashboardModule } from './private/dashboard/dashboard.module';
 import { DragAndDropModule } from './private/drag-and-drop/drag-and-drop.module';
 import { UserLayoutModule } from './public/user-layout/user-layout.module';
 import { LoginModule } from './public/login/login.module';
+import { PrivateComponent } from './private/private.component';
+import { PrivateModule } from './private/private.module';
 
 import { AppComponent } from './app.component';
 import { KitchenSinkComponent } from './components/kitchen-sink/kitchen-sink.component';
@@ -17,15 +19,15 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
-    KitchenSinkComponent
+    KitchenSinkComponent,
+    PrivateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PublicModule,
     SharedModule,
-    DashboardModule,
-    DragAndDropModule,
+    PrivateModule,
     UserLayoutModule,
     LoginModule,
     DragDropModule
