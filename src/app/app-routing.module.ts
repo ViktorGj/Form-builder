@@ -30,7 +30,7 @@ export const PUBLIC_ROUTES: Routes = [
 export const SECURE_ROUTES: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   ...dashboardRoute,
-  // ...dragRoutes
+  ...dragRoutes
 ];
 
 const APP_ROUTES: Routes = [
