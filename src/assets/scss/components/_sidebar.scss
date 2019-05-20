@@ -1,24 +1,23 @@
-#sidebar-right {
+.side-bar-right {
     background-color: #eee;
     height: 100%;
     width: 20%;
     position: fixed;
     right: 0;
-    .form-elements {
+
+    &-title {
         margin-top: 5%;
         margin-bottom: 5%;
     }
-    .button-margin {
-        margin: 2%;
-    }
-    .cards-dimension {
+
+    &-cards {
         margin: 3%;
         display: flex;
         align-items: center;
     }
 }
 
-#sidebar-left {
+.side-bar-left {
     background-color: #eee;
     height: 100%;
     width: 20%;
