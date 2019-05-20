@@ -4,7 +4,7 @@ import { DragAndDropComponent } from './drag-and-drop.component';
 import { AuthGuard } from 'src/app/services/auth.guard';
 
  export const dragRoutes: Routes = [
-    { path: 'builder', component: DragAndDropComponent, canActivate: [AuthGuard] }
+    { path: 'builder', component: DragAndDropComponent }
 ];
 
 @NgModule({

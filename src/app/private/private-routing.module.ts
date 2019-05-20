@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
-import { PrivateComponent } from './private.component';
 import { dashboardRoute } from './dashboard/dashboard-routing.module';
 import { dragRoutes } from './drag-and-drop/drag-and-drop-routing.module';
 
-export const privateRoute: Routes = [
-  {path: '', component: PrivateComponent, children: [
-    ...dashboardRoute,
-    ...dragRoutes,
-    // {path: 'drag', component: DragAndDropComponent}
-  ]}
+export const SECURE_ROUTES: Routes = [
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  ...dashboardRoute,
+  ...dragRoutes
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(privateRoute)],
+  imports: [RouterModule.forChild(SECURE_ROUTES)],
   exports: [RouterModule]
 })
 export class PrivateRoutingModule { }
