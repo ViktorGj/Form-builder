@@ -2,30 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { PublicModule } from './public/public.module';
-import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
-import { PrivateComponent } from './private/private.component';
 import { PrivateModule } from './private/private.module';
 
 import { AppComponent } from './app.component';
 import { KitchenSinkComponent } from './components/kitchen-sink/kitchen-sink.component';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KitchenSinkComponent,
-    PrivateComponent
+    KitchenSinkComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     SharedModule,
     PublicModule,
-    PrivateModule
+    PrivateModule,
+    RouterModule
   ],
-  exports: [
-    SharedModule
-  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

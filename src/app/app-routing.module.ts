@@ -10,7 +10,7 @@ import { AuthGuard } from './services/auth.guard';
 
 
 
-const APP_ROUTES: Routes = [
+const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '', component: PublicComponent, children: PUBLIC_ROUTES },
   { path: '', component: PrivateComponent, children: SECURE_ROUTES, canActivate: [ AuthGuard ]},
@@ -22,7 +22,7 @@ const APP_ROUTES: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(APP_ROUTES),
+    RouterModule.forRoot(routes),
 
   ],
   exports: [RouterModule]
