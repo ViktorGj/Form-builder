@@ -3,10 +3,6 @@
  position: relative;
 }
 
-.radio, .checkbox {
-  // display: none;
-}
-
 .radio:checked + span:before {
   content: "\f192";
 }
@@ -30,4 +26,24 @@
 }
 .checkbox + span:before {
   content: "\f0c8";
+}
+
+// SHARED CARDS VIEW
+.card {
+  padding: 0 15px;
+  .card-body {
+    .card-shared {
+      padding: 0 5px;
+      text-align: center;
+    }
+    .card-submitted {
+      padding: 0 5px;
+      text-align: center;
+    }
+    .card-button-group {
+      .btn {
+        width: 90px;
+      }
+    }
+  }
 }
