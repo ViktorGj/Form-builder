@@ -30,17 +30,25 @@
 
 // SHARED CARDS VIEW
 .card {
-  padding: 0 15px;
+  padding: 0;
+  .card-header {
+    text-align: center;
+  }
   .card-body {
-    .card-shared {
-      padding: 0 5px;
-      text-align: center;
-    }
-    .card-submitted {
-      padding: 0 5px;
-      text-align: center;
+    .card-content {
+      justify-content: center;
+      .card-shared {
+        padding: 0 5px;
+        text-align: center;
+      }
+      .card-submitted {
+        padding: 0 5px;
+        text-align: center;
+      }
     }
     .card-button-group {
+      display: flex;
+      justify-content: center;
       .btn {
         width: 90px;
       }
