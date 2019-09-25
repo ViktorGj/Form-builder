@@ -1,0 +1,348 @@
+.#{$prefix} {
+    &-question {
+        width: 100%;
+
+        &-font {
+            font-size: 12px;
+            margin-bottom: 0px;
+
+            @include breakpoint(lg) {
+                font-size: 16px;
+            }
+
+            @include breakpoint(md) {
+                font-size: 15px;
+            }
+
+            @include breakpoint(sm) {
+                font-size: 12px;
+            }
+
+            @include breakpoint(xs) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    &-text-options {
+        p {
+            margin-top: -5px;
+        }
+
+
+    }
+
+    &-text-options {
+        p {
+            margin-top: -5px;
+        }
+    }
+
+    &-option-row {
+        width: 115%;
+        margin-top: -10px;
+    }
+
+    &-col-xs {
+        @include breakpoint(xs) {
+            padding: 0px;
+        }
+
+        &-option {
+            @include breakpoint(xs) {
+                width: 45%;
+            }
+
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+
+        &-points {
+            @include breakpoint(xs) {
+                width: 20%;
+            }
+        }
+
+        &-input-title {
+            @include breakpoint(xs) {
+                width: 80%;
+            }
+        }
+
+        &-save-icon {
+            @include breakpoint(xs) {
+                width: 0%
+            }
+        }
+
+        &-img {
+            @include breakpoint(xs) {
+                width: 10%;
+            }
+        }
+    }
+
+    &-btn {
+        &-positions {
+            display: flex;
+            margin-top: -30px;
+            // flex-direction: row;
+            // width: 23%;
+            justify-content: space-evenly;
+            align-items: center;
+
+
+
+            @include breakpoint(xs) {
+                width: 20%;
+            }
+        }
+
+        &-size {
+            @include breakpoint(xs) {
+                margin: 7px;
+                margin-top: -40px;
+            }
+        }
+    }
+
+    &-points {
+        &-size {
+            height: 35px;
+            padding-left: 5px;
+
+            @include breakpoint(xs) {
+                height: 30px;
+            }
+        }
+    }
+
+    &-options-wrap {
+        margin-top: 30px;
+
+        @include breakpoint(xs) {
+            margin-top: 7px;
+        }
+    }
+
+    &-icons-size {
+        font-size: 25px;
+        cursor: pointer;
+        margin-top: 35px;
+
+        @include breakpoint(xs) {
+            font-size: 20px;
+            margin-top: 28px;
+        }
+    }
+
+    &-btn-hide {
+        display: none;
+    }
+
+    &-add {
+        // font-family: Roboto;
+        position: absolute;
+        left: 45px;
+        margin-top: 20px;
+        cursor: pointer;
+
+        @include breakpoint(xs) {
+            left: 15px;
+            margin-top: 7px;
+            font-size: 16px;
+        }
+    }
+
+    &-img {
+        @include breakpoint(xs) {
+            width: 10%;
+        }
+    }
+
+    &-state-question {
+        position: absolute;
+        right: 40px;
+        bottom: 26px;
+        font-size: 26px;
+
+        @include breakpoint(xs) {
+            bottom: 14px;
+        }
+    }
+
+    &-btn {
+        &-positions {
+            display: flex;
+            margin-top: 0px;
+            // flex-direction: row;
+            // width: 23%;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 50px;
+        }
+
+        @supports (-ms-flow-from: thingy) {
+
+            /* Edge only */
+            &-positions {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 3px;
+            }
+        }
+
+        @include breakpoint(xs) {
+            width: 20%;
+        }
+    }
+
+
+
+    // *************
+    &-size {
+        @include breakpoint(xs) {
+            margin: 7px;
+            margin-top: -40px;
+        }
+    }
+
+
+    &-points {
+        &-size {
+            height: 35px;
+            padding-left: 5px;
+
+            @include breakpoint(xs) {
+                height: 27px;
+            }
+        }
+    }
+
+    // ***************
+
+    &-options-wrap {
+        margin-top: 30px;
+
+        @include breakpoint(xs) {
+            margin-top: 7px;
+        }
+    }
+
+    &-icons-size {
+        font-size: 25px;
+        cursor: pointer;
+        margin-top: 35px;
+
+        @include breakpoint(xs) {
+            font-size: 20px;
+            margin-top: 28px;
+        }
+    }
+
+    &-btn-hide {
+        display: none;
+    }
+
+    &-add {
+        // font-family: Roboto;
+        position: absolute;
+        left: 52px;
+        margin-top: 0px;
+        cursor: pointer;
+
+        @include breakpoint(xs) {
+            left: 15px;
+            margin-top: 7px;
+            font-size: 16px;
+        }
+    }
+
+    &-img {
+        &-title {
+            max-height: 20vh;
+            margin-top: 15px;
+            margin-left: 0px;
+
+            @include breakpoint(xs) {
+                max-width: 80%;
+                max-height: 20vh;
+                margin-left: -8%;
+            }
+        }
+
+        &-options {
+            max-width: 80%;
+            max-height: 20vh;
+            margin-left: -20%;
+            margin-bottom: 15px;
+
+            @include breakpoint(xs) {
+                max-width: 80%;
+                max-height: 20vh;
+                margin-left: -8%;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &-long-text {
+        word-break: break-word;
+    }
+
+    &-image-upload {
+        margin: 0px;
+        margin-left: -7px;
+
+        @include breakpoint(xs) {
+            margin-right: 3px;
+        }
+    }
+
+    &-fa-icon {
+        margin-bottom: 18px;
+
+        @include breakpoint(xs) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &-upload-view {
+        margin-left: 0px;
+    }
+}
+
+.remove-image-sign {
+    position: absolute;
+    margin-left: 1%;
+    color: $danger;
+}
+
+.loading {
+    position: fixed;
+    left: 40%;
+    top: 50%;
+    color: #585c8b;
+    z-index: 1000;
+}
+
+.background-change {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.233);
+    z-index: 999;
+}
+
+.preview-image {
+    width: 20%;
+    margin-bottom: 2%;
+}
+
+.fa-images {
+    color: #8398aa;
+}

@@ -1,22 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { PrivateRoutingModule } from './private-routing.module';
-import { DragAndDropModule } from './drag-and-drop/drag-and-drop.module';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { PrivateComponent } from './private.component';
+import { PrivateRoutingModule } from './private-routing.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { DragDropViewModule } from './drag-drop-view/drag-drop.module';
 import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UserLayoutComponent } from './user-layout/user-layout.component';
+import { CKEditorModule } from 'ckeditor4-angular';
 
 @NgModule({
   declarations: [
-    PrivateComponent
+    PrivateComponent,
+    UserLayoutComponent
   ],
   imports: [
     CommonModule,
     PrivateRoutingModule,
     DashboardModule,
-    DragAndDropModule,
-    SharedModule
-  ]
+    DragDropViewModule,
+    SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CKEditorModule
+    ]
 })
 export class PrivateModule { }

@@ -1,18 +1,21 @@
-<div class="nav-width">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Logo</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" [routerLink]="['/dashboard']" routerLinkActive="router-link-active" >Dashboard </a>
-              </li>
-          </ul>
-          <div class="my-2 my-lg-0">
-              <p>Admin</p>
+<div class="fb-nav">
+  <nav class="navbar fb-navbar">
+    <p routerLinkActive="router-link-active" class="fb-dashboard-logo text-primary" [routerLink]="['/dashboard']" [style.display]="!toggle ? 'inline-block' : 'none'">F<strong>B</strong></p>
+    <p routerLinkActive="router-link-active" class="fb-dashboard-logo text-primary" [routerLink]="['/dashboard']" [style.display]="toggle ? 'inline-block' : 'none'">Form<strong>Builder</strong></p>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active fb-nav-menu">
+            <i class="fas fa-bars text-primary ml-2 fb-navs-icon-size" (click)="newState()"></i>
+        </li>
+        <li class="nav-item dropdown fb-role">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            {{role}}
+          </a>
+          <div class="dropdown-menu fb-dropdown-menu " aria-labelledby="navbarDropdown">
+            <a class="dropdown-item fb-dropdown-item" (click)="logout()">Log Out</a>
           </div>
-      </div>
+        </li>
+      </ul>
   </nav>
 </div>
+

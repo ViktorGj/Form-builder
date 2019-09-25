@@ -1,0 +1,58 @@
+<div class="container fb-container">
+  <div class="fb-page-wrapper">
+    <div class="mt-3 mb-3 form-group">
+      <h4 [innerHTML]="formTitle" class="fb-title"></h4>
+      <h6><strong> {{ username}} </strong></h6>
+    </div>
+    <div class="form-group fb-question-block" *ngFor="let item of questions">
+      <h5 class=" mb-3" [innerHTML]="item.name"></h5>
+      <img class="fb-reviewImg-question" *ngIf="item.imageLink != undefined && item.imageLink != ''" src="{{item.imageLink}}">
+      <div *ngFor="let answer of item.options">
+        <div *ngIf="item.type === 1">
+          <div class="row">
+            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-4 ml-5 custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input " [checked]="answer.isSelected" disabled>
+              <label class="custom-control-label fb-question-block-label" [innerHTML]="answer.name"></label>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3">
+              <div class="fb-points">
+                <span>{{ answer.points }}</span>
+              </div>
+            </div>
+            <img class="fb-reviewImg" *ngIf="answer.imageLink != ''" src="{{ answer.imageLink }}">
+          </div>
+        </div>
+        <div *ngIf="item.type === 2">
+          <div class="row">
+            <div class="col-lg-10 col-md-9 col-sm-8 col-xs-4 ml-5 custom-control custom-radio">
+              <input type="radio" class="custom-control-input" [checked]="answer.isSelected" disabled>
+              <label class=" custom-control-label fb-question-block-label" [innerHTML]="answer.name"></label>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3">
+              <div class="fb-points">
+                <span>{{ answer.points }}</span>
+              </div>
+            </div>
+            <img class="fb-reviewImg" *ngIf="answer.imageLink != ''" src="{{ answer.imageLink }}">
+          </div>
+        </div>
+        <div *ngIf="item.type === 3 ">
+          <div class="row">
+            <div class="custom-control col-md-12">
+              <textarea name="{{answer.name}} " class="fb-question-block-textarea-review" disabled
+                [value]="answer.text"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span *ngIf="item.type === 1 || item.type === 2" class="fb-float-right fb-points-total">
+        {{item.scoredQuestionPoints}}/{{item.totalQuestionPoints}}</span>
+    </div>
+    <div class="fb-question-block">
+      <div class="fb-float-right">
+        <p class="fb-total-p"> Total points: <span class="fb-total">{{totalScored}}/{{totalFormPoints}}</span> </p>
+      </div>
+    </div>
+    <div>
+      <button class="float-right btn btn-primary fb-back" (click)="navigateBackToStatistics(formId)">Back</button>
+    </div>

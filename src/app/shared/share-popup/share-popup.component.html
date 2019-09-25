@@ -1,0 +1,37 @@
+<div class="mod">
+  <div class="modal fb-modal-share">
+    <div class="">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="form-group col-md-12">
+              <label class="fb-popup-search">Sent to:</label>
+            <input class="form-control fb-search-lenght ml-2  mr-sm-2 search-style" type="text"
+              [(ngModel)]="searchName" (ngModelChange)="search(searchName)" name="search" placeholder="Search" aria-label="Search">
+          </div>
+        </div>
+        <div class="modal-body fb-modal-share-body ">
+          <p class="fb-modal-warning" *ngIf="selectWarning == true">Select recipient(s)</p>
+          <div class="fb-scroll">
+            <div *ngFor="let item of users">
+              <div class="custom-control custom-checkbox fb-emails">
+                <input type="checkbox" class="custom-control-input" id="{{ item.email }}" [(ngModel)]="item.selected"
+                  (change)="checkIfAllSelected()">
+                <label class="custom-control-label" for="{{ item.email }}">{{ item.email }}</label>
+              </div>
+            </div>
+          </div>
+          <div class=" custom-control custom-checkbox fb-select-all">
+            <input type="checkbox" class="custom-control-input " id="customCheckAll" [(ngModel)]="selectedAll"
+              (change)="selectAll();">
+            <label class="custom-control-label" for="customCheckAll">Select All</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" [disabled]=sendBtnDisabled class="btn btn-primary" (click)=shareForm()>Send</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"
+            (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<!-- Edit question view -->
+<div [formGroup]="textForm" *ngIf="editQuestion == true">
+    <i class="fas fa-font fb-fa-icon text-primary"></i>
+    <span> Text Question</span>
+
+    <div class="row">
+      <ckeditor class="col-md-10" type="inline" formControlName="name" [config]="configToolbar"></ckeditor>
+      <label class="col-md-2 fb-icons-size far mt-1 fa-images ">
+        <input type="file" (change)="onFileSelected($event)" accept="image/*" name="" class=" form-control fb-btn-hide" />
+      </label>
+    </div>
+
+    <div class="row">
+      <div class="fb-upload-view col-md-12">
+        <img *ngIf="textForm.value.imageLink" class="fb-img-title img-fluid" src="{{ textForm.value.imageLink }}">
+        <i class="fa fa-times remove-image-sign"
+          *ngIf="textForm.value.imageLink != '' && textForm.value.imageLink != null"
+          (click)="removeImg(textForm.value.imageId)" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="pleaseWait" class="background-change">
+    <div class="fb-loader">
+      <img src="./../../../../../../../assets/img/Spinner2.svg" class="fb-loader-img" />
+      <p><strong> Uploading... </strong></p>
+    </div>
+  </div>
+  <div class="mt-5">
+      <i (click)="onEdit()" class="far fa-save text-primary fb-state-question" *ngIf="editQuestion"></i>
+      <i (click)="onEdit()" class="far fa-edit text-primary fb-state-question" *ngIf="!editQuestion"></i>
+  </div>
+
+  <!-- Dropped question view -->
+  <div class="cont ml-4 mb-4" *ngIf="editQuestion == false">
+    <h4 class="text-left text-primary" [innerHTML]="textForm.controls.name.value"></h4>
+    <img src="{{ textForm.value.imageLink }}" class="preview-image" />
+    <textarea disabled class="form-control mb-3" rows="3" placeholder="Answer area"></textarea>
+  </div>

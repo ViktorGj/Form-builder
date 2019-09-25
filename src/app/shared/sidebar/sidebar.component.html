@@ -1,0 +1,16 @@
+<div class="fb-sidebar" [ngClass]="{'fb-sidebar-toggle': toggle}">
+  <ul class="fb-sidebar-list">
+    <li class="fb-sidebar-list-item">
+      <a class="fb-sidebar-list-link fb-sidebar-list-link-alt" [routerLink]="['/form-build']" routerLinkActive="router-link-active">
+        <i class="fas fa-plus fb-sidebar-icon"></i>
+        <span class="fb-sidebar-desc"> Create</span>
+      </a>
+    </li>
+    <li class="fb-sidebar-list-item">
+      <a class="fb-sidebar-list-link" [routerLink]="['/dashboard/shared']" routerLinkActive="router-link-active">
+        <i class="fas fa-home fb-sidebar-icon"></i>
+        <span class="fb-sidebar-desc"> Dashboard</span>
+      </a>
+    </li>
+  </ul>
+</div>

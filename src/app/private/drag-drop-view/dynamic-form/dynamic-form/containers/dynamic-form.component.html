@@ -1,0 +1,81 @@
+<!-- Title -->
+<div class="row">
+  <div class="col-md-10">
+    <div class="fb-dynamic-form-questionnaire">
+      <div for="textName"><strong class="text-primary">Questionnaire title: </strong> </div>
+      <div class="row fb-title-row">
+
+        <div class="form-group col-lg-9 col-md-9 col-sm-9  fb-col-xs-input-title">
+          <ckeditor type="inline" [(ngModel)]="questionnaireTitle" *ngIf="titleEdit == true"
+            class="fb-dynamic-form-questionnaire-title" [config]="configToolbar"></ckeditor>
+          <p class="text-primary fb-dynamic-form-questionnaire-preview-title" *ngIf="titleEdit == false"
+            [innerHTML]="questionnaireTitle"></p>
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-2  fb-col-xs-save-icon ml-2">
+          <i class="far fa-save fb-dynamic-form-questionnaire-save text-primary" *ngIf="titleEdit"
+            (click)="changeButtonState()"></i>
+          <i class="far fa-edit fb-dynamic-form-questionnaire-edit text-primary" *ngIf="!titleEdit"
+            (click)="changeButtonState()"></i>
+        </div>
+      </div>
+      <!-- end Title -->
+
+      <!-- Drop area -->
+      <div class="fb-dynamic-form-questionnaire" cdkDropList #todoList="cdkDropList" [cdkDropListData]="config"
+        [cdkDropListConnectedTo]="[configList]" (cdkDropListDropped)="drop($event)"
+        class="fb-dynamic-form-questionnaire-drop">
+        <div class="fb-center d-flex flex-column align-items-center justify-content-center text-primary"
+          *ngIf="config.length == 0">
+          <p class="fb-drop-help"><i class="fas fa-plus"></i> Drop element from the list and place it here!</p>
+        </div>
+        <!-- card -->
+        <div class="card bg-light fb-dynamic-form-questionnaire-widgets" *ngFor="let item of config let i = index;"
+          cdkDragBoundary=".drop" cdkDrag>
+          <div class="fb-placeholder" *cdkDragPlaceholder></div>
+          <div class="fb-handle fb-cursor-pointer" cdkDragHandle>
+            <i class="fas fa-arrows-alt-v text-secondary"></i>
+          </div>
+          <div class="fb-dynamic-form-questionnaire-delete">
+            <i class="fas fa-times text-danger cursor" (click)="deleteQuestion(i); removeImgs(item)"></i>
+          </div>
+          <div class="fb-wrapQuestion">
+            <app-form-checkbox *ngIf="item.type === 1" [questionData]="item"
+              (newQuestion)="saveQuestion($event, item.id)">
+            </app-form-checkbox>
+            <app-radio *ngIf="item.type === 2" [questionData]="item" (newQuestion)="saveQuestion($event, item.id)">
+            </app-radio>
+            <app-form-input *ngIf="item.type === 3" [questionData]="item" (newQuestion)="saveQuestion($event, item.id)">
+            </app-form-input>
+          </div>
+        </div>
+      </div>
+      <!-- end of drop area -->
+    </div>
+  </div>
+
+  <div class="col-md-2 col-sm-12">
+    <div class="fb-dynamic-form-elements">
+      <h4 class="text-primary fb-dynamic-form-elements-elements-title">Form Elements</h4>
+      <div cdkDropList #configList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[todoList]"
+        class="fb-dynamic-form-elements-wrap">
+        <div class="row flex-sm-row justify-content-center">
+          <div class="fb-dynamic-form-elements-card" *ngFor="let item of todo" cdkDrag>
+            <div *ngIf="item.type == 1" class="fb-dynamic-form-elements-card-title">Multiple Choice</div>
+            <div *ngIf="item.type == 2" class="fb-dynamic-form-elements-card-title">Single Choice</div>
+            <div *ngIf="item.type == 3" class="fb-dynamic-form-elements-card-title">Text</div>
+            <div class="card-body fb-icon text-center"><i class="{{item.image}} fa-img text-primary"></i></div>
+          </div>
+        </div>
+        <div class="fb-dynamic-form-elements-buttons">
+          <div class="fb-dynamic-form-elements-button">
+            <button class="btn w-100 btn-secondary" (click)="onShare()">Share</button>
+          </div>
+          <div class="fb-dynamic-form-elements-button">
+            <button class="btn w-100 btn-primary" (click)="saveForm()">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->

@@ -1,0 +1,19 @@
+<div class="mod">
+  <div class="modal fb-modal-submit">
+    <div class="fb-content">
+      <div class="fb-header">
+        <h5>Are you sure you want to submit this form?</h5>
+      </div>
+      <div class="modal-body fb-modal-share-body ">
+        <div class="fb-content">
+          <p>After submitting the form you won`t be able to edit your answers.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-primary" data-dismiss="modal"
+          (click)="bsModalRef.hide()">No</button>
+        <button type="button" class="btn btn-primary" (click)="submitForm();bsModalRef.hide()">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>

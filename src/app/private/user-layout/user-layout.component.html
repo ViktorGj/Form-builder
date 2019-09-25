@@ -1,0 +1,61 @@
+<div class="container" *ngIf="valid">
+  <div class="fb-page-wrapper">
+    <div class="form-group mt-3 mb-3">
+      <h4 [innerHTML]="title" class="fb-title"></h4>
+    </div>
+    <div class="form-group fb-question-block" *ngFor="let question of questions; let i = index;">
+      <h5 class="mb-3" [innerHTML]="question.name"></h5>
+      <img class="fb-reviewImg-question" *ngIf="question.imageLink != undefined && question.imageLink != ''"
+        src="{{ question.imageLink }}" />
+      <div *ngFor="let answer of question.answers">
+
+        <div *ngIf="question.type === 1">
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" id="{{ answer.optionId }}" name="{{ answer.name }}" class="custom-control-input"
+              (click)="onInput(question.id, answer.optionId, $event.target.checked)" [checked]="answer.isSelected"
+              [disabled]="isFormSubmitted">
+            <label class="custom-control-label fb-question-block-label" for="{{ answer.optionId }}"
+              [innerHTML]="answer.name"></label>
+          </div>
+          <img class="fb-reviewImg" src="{{ answer.imageLink }}" />
+        </div>
+
+        <div *ngIf="question.type === 2">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="{{ answer.optionId }}" class="custom-control-input" name="{{ question.name + i }}"
+              (click)="onInput(question.id, answer.optionId, $event.target.checked)" [checked]="answer.isSelected"
+              [disabled]="isFormSubmitted">
+            <label class="custom-control-label fb-question-block-label" for="{{ answer.optionId }}"
+              [innerHTML]="answer.name"></label>
+          </div>
+          <img class="fb-reviewImg" src="{{ answer.imageLink }}" />
+        </div>
+
+        <div *ngIf="question.type === 3 ">
+          <div class="form-group fb-question-block ">
+            <div class="custom-control fb-question-block-control">
+              <textarea name="{{ answer.name }}" id="{{ answer.optionId }}" class="fb-question-block-textarea"
+                placeholder="Type your answer here"
+                (change)="onFocusOut(question.id, answer.optionId, $event.target.value)" [disabled]="isFormSubmitted"
+                [value]="answer.text"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="float-right btn btn-primary fb-back" (click)="openSubmitModal()"
+        [disabled]="!submitBtn || isFormSubmitted" *ngIf="showBtn">Submit</button>
+    </div>
+  </div>
+</div>
+<div class="container" *ngIf="!valid">
+  <div class="fb-page-wrapper">
+    <div class="row mt-3 mb-3" class="fb-wrong">
+      <i class="fa fa-exclamation-circle"></i>
+      <h4><strong>Oops! Something went wrong...</strong></h4>
+      <p>We couldn't find the form or the page you were looking for. <br>
+        Why not try to contact our administrator at <a href="mailto:admin@test.com">admin@test.com</a> </p>
+    </div>
+  </div>
+</div>

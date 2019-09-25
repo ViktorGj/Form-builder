@@ -1,0 +1,244 @@
+.#{$prefix} {
+
+    &-cards-container {
+        @include breakpoint(lg) {
+            width: 100%;
+            padding: 0px 10%;
+        }
+    }
+
+    &-dynamic-form-elements {
+        text-align: center;
+        margin-left: 15px;
+        margin-right: 15px;
+        position: fixed;
+
+        @include breakpoint(sm) {
+            margin: 0px;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        @include breakpoint(IPad) {
+            margin-left: 50px;
+        }
+
+        &-elements-title {
+            @include breakpoint(IPad) {
+                font-size: 17px;
+                margin-left: -3px;
+            }
+        }
+
+        &-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint(IPad) {
+                width: 80%;
+            }
+
+            @include breakpoint(sm) {
+                flex-direction: row;
+            }
+        }
+
+        &-card {
+            width: 80%;
+            margin-top: 10px;
+            margin-left: 5px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 7px;
+            box-shadow: $box-shadow;
+            // width: 100%;
+            float: left;
+
+            &:hover {
+                cursor: all-scroll;
+            }
+
+            @include breakpoint(sm) {
+                max-height: 115px;
+                width: 30%;
+            }
+
+            @include breakpoint(IPad) {
+                width: 80%;
+            }
+
+            &-title {
+                color: $primary
+            }
+        }
+
+        &-buttons {
+            @include breakpoint(sm) {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                bottom: -58px;
+            }
+
+            @include breakpoint(IPad) {
+                bottom: -95px;
+                flex-direction: column;
+                left: -17px;
+            }
+
+            @include breakpoint(xs) {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                bottom: -58px;
+            }
+        }
+
+        &-button {
+            margin-top: 10px;
+
+            @include breakpoint(sm) {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &-dynamic-form-questionnaire {
+        &-drop {
+            min-height: 400px;
+            border: 4px dotted $primary;
+            margin: 0px;
+            padding: 15px;
+            display: block;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        &-edit {
+            top: 0px;
+            font-size: 28px;
+        }
+    }
+
+    &-title-row {
+        margin-left: 0px;
+    }
+
+    &-dynamic-form-questionnaire {
+        &-title {
+            width: 85%;
+            position: relative;
+        }
+
+        &-save {
+            font-size: 30px;
+            position: absolute;
+            right: 0;
+        }
+
+        &-preview {
+            &-title {
+                word-wrap: break-word;
+                width: 80%;
+            }
+        }
+
+        &-widgets {
+            height: auto;
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: -1px 2px 5px 0px rgba(0, 0, 0, 0.75);
+
+            @include breakpoint(xs) {
+                font-size: 15px;
+                padding: 25px;
+            }
+        }
+
+        &-delete {
+            font-size: 28px;
+            position: absolute;
+            top: 5px;
+            right: 21px;
+
+            @include breakpoint(xs) {
+                font-size: 20px;
+                top: 0px;
+                right: 10px;
+            }
+        }
+
+        &-btn {
+            position: absolute;
+            top: 28px;
+            right: 100px;
+
+            @include breakpoint(md) {
+                right: 20px;
+            }
+
+            @include breakpoint(xs) {
+                right: 0px;
+            }
+        }
+    }
+
+
+
+    &-card-shadow {
+        box-shadow: 0px 0px 20px 1px #6e81a52e;
+        border: none;
+    }
+
+
+    &-cursor-pointer {
+        cursor: pointer;
+    }
+
+    &-drop-help {
+        width: 100%;
+    }
+
+    &-handle {
+        position: absolute;
+        top: 5px;
+        left: 13px;
+        font-size: 25px;
+
+        @include breakpoint(xs) {
+            top: 0px;
+            left: 10px;
+            font-size: 20px;
+        }
+    }
+
+    &-placeholder {
+        background: #ccc;
+        border: dotted 3px #999;
+        min-height: 120px;
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    }
+
+    &-icon {
+        font-size: 40px;
+        padding: 0px;
+
+        @include breakpoint(md) {
+            font-size: 30px;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 26px;
+        }
+
+        @include breakpoint(xs) {
+            font-size: 30px;
+        }
+    }
+
+}

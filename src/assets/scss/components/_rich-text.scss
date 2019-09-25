@@ -1,0 +1,43 @@
+.cke_editable {
+    border: 1px solid lightgrey;
+    max-height: 100px;
+    overflow: auto;
+    background: #fff;
+
+    @include breakpoint(lg) {
+      width: 100%;
+      margin-left:  22px;
+  }
+
+    @include breakpoint(md) {
+        width: 90%;
+        margin-left: 25px;
+    }
+
+    @include breakpoint(sm) {
+        width: 80%;
+        margin-left: 30px;
+    }
+
+    @include breakpoint(xs) {
+        width: 80%;
+        margin-left: 10px;
+    }
+
+
+    p {
+        margin: 0px;
+        text-align: left;
+        padding-left: 10px;
+        background-color: white;
+        font-size: 16px;
+        padding: 5px 5px;
+
+        @include breakpoint(xs) {
+            margin-left: 5px;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+    }
+
+}

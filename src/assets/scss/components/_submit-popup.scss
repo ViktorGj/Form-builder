@@ -1,0 +1,21 @@
+
+.#{$prefix}-modal-submit {
+  display: block;
+  position: relative;
+
+  .#{$prefix}-content {
+    text-align: center;
+    .#{$prefix}-header {
+      height: 95px;
+      background-color: $primary;
+      color: $white;
+    }
+    h5 {
+      text-align: center;
+      padding: 1.3rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

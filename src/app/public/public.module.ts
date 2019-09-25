@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { PublicRoutingModule } from './public-routing.module';
 import { PublicComponent } from './public.component';
 import { LoginModule } from './login/login.module';
-import { UserLayoutModule } from './user-layout/user-layout.module';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { ThankYouModule } from './thank-you/thank-you.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,7 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     CommonModule,
     PublicRoutingModule,
     LoginModule,
-    UserLayoutModule
+    ThankYouModule
   ]
 })
 export class PublicModule { }

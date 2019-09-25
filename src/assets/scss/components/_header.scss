@@ -1,3 +1,116 @@
-.nav-width {
-    width: 100%;
+.#{$prefix} {
+    &-nav {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        background: #fff;
+        color: color($primary);
+        box-shadow: 0 8px 20px 0 #dae0eb99;
+        height: 4.25rem;
+        padding: 0;
+        height: 60px;
+
+        &-links {
+            font-size: 20px;
+            margin-top: -26px;
+            margin-left: 30px;
+        }
+    }
+
+    &-nav-menu {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    &-bars {
+        font-size: 29px;
+        padding: 7px;
+        margin-top: 0;
+    }
+
+    &-dashboard-logo {
+        color: color($primary);
+        font-size: 20px;
+        margin: 0px;
+        margin-top: 8px;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+
+        }
+    }
+
+    &-navbar-collapse {
+        background-color: #fff;
+        margin-top: -12px;
+        margin-left: 30px;
+        text-align: center;
+    }
+
+
+    &-wrapper {
+        margin-left: 5%;
+
+        &-logout {
+            min-width: unset;
+            width: 90px;
+
+            &-item {
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    &-links {
+        font-size: 15px;
+    }
+
+    &-dropdown-logout {
+        font-size: 16px;
+        font-weight: 500
+    }
+
+    &-nav-brand {
+        height: 35px;
+        width: 125px;
+        margin-top: auto;
+    }
+
+    &-role {
+        position: absolute;
+        right: 20px;
+        top: 13px;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    &-dropdown {
+        &-menu {
+            border: none;
+            margin-left: -54px;
+            text-align: center;
+            min-width: 7rem
+        }
+
+        &-item {
+            width: 100%;
+            text-align: center;
+
+            @include breakpoint(hm) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-btn {
+        &-dropdown {
+            margin-top: 5px;
+        }
+
+        &-taggler {
+            margin-top: 5px;
+        }
+    }
+
 }

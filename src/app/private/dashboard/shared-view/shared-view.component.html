@@ -1,0 +1,34 @@
+<div class="fb-cards-container">
+<app-sub-header class="text-primary fb-sub-header-xs" title="Shared" [total]="totalItems">
+  <button type="button" class="btn btn-primary float-right fb-btn-align-sm"
+    [routerLink]="['/dashboard/draft']">Draft</button>
+</app-sub-header>
+<div class="row fb-card-align-sm">
+  <div class="col-lg-3 col-md-4 col-sm-6 my-1 fb-card-size fb-card-wrap" *ngFor="let item of cardsData">
+    <div class="card d-flex align-items-center flex-column mx-2 my-2 ">
+      <div class="fb-card-title card-title text-truncate text-center mt-3 text-primary" [innerHTML]="item.name"></div>
+      <div class="card-body col-12">
+        <div class="row fb-space-evenly fb-statistic ">
+          <div class="col-md-6 fb-stats-wrap">
+            <p class="card-shared-title text-center">Shared</p>
+            <p class="text-center">{{item.numberShared}}</p>
+          </div>
+          <div class="col-md-6 fb-stats-wrap">
+            <p class="card-shared-title text-center">Submitted</p>
+            <p class="text-center">{{item.numberSubmitted}}</p>
+          </div>
+        </div>
+        <div class="row fb-space-evenly">
+          <button class="btn btn-primary fb-btn-card-xs fb-font-size col-md-4 col-sm-8 col-xs-6 mx-1 my-sm-1"
+            (click)="openShareModal(item.id)">Share</button>
+          <button class="btn btn-secondary fb-btn-card-xs fb-font-size col-md-4 col-sm-8 mx-1 my-sm-1"
+            [routerLink]="['/dashboard/statistics/',item.id]" routerLinkActive="router-link-active">Statistics</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div *ngFor="let data of cardsData">
+  <h4 class="fb-no-shared-forms" *ngIf="data.length==0">No shared forms</h4>
+</div>

@@ -1,35 +1,50 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-
-import { PageWrapperComponent } from './page-wrapper/page-wrapper.component';
-import { SavePopUpModule } from './save-pop-up/save-pop-up.module';
-import { SharePopUpModule } from './share-pop-up/share-pop-up.module';
+import { SharedRoutingModule } from './shared-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HeaderModule } from './header/header.module';
-// import { HeaderComponent } from './header/header.component';
+import { SharePopupComponent } from './share-popup/share-popup.component';
+import { SharedPopupRoutingModule } from './share-popup/share-popup-routing.module';
+import { SavePopupComponent } from './save-popup/save-popup.component';
+import { FormsModule } from '@angular/forms';
+import { SessionPopupComponent } from './session-popup/session-popup.component';
+import { SubmitPopupComponent } from './submit-popup/submit-popup.component';
+import { ShareWarningModalComponent } from './share-warning-modal/share-warning-modal.component';
+import { SaveOnSharePopupComponent } from './save-on-share-popup/save-on-share-popup.component';
+import { SidebarModule } from './sidebar/sidebar.module';
+import { PageModule } from './page/page.module';
 
 @NgModule({
   declarations: [
-    PageWrapperComponent,
     PageNotFoundComponent,
-    // HeaderComponent
+    SharePopupComponent,
+    SavePopupComponent,
+    SessionPopupComponent,
+    SubmitPopupComponent,
+    ShareWarningModalComponent,
+    SaveOnSharePopupComponent
   ],
   imports: [
     CommonModule,
-    SharePopUpModule,
-    SavePopUpModule,
-    RouterModule,
-    HeaderModule
+    SharedRoutingModule,
+    SharedPopupRoutingModule,
+    HeaderModule,
+    FormsModule,
+    SidebarModule,
+    PageModule
   ],
   exports: [
-    CommonModule,
-    FormsModule,
-    SharePopUpModule,
-    SavePopUpModule,
-    // HeaderComponent,
-    HeaderModule
-  ]
+    HeaderModule,
+    SidebarModule,
+    PageModule
+  ],
+  entryComponents: [
+    SharePopupComponent,
+    SavePopupComponent,
+    SessionPopupComponent,
+    SubmitPopupComponent,
+    ShareWarningModalComponent,
+    SaveOnSharePopupComponent
+  ],
 })
 export class SharedModule { }

@@ -1,7 +1,22 @@
 /* Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components */
-
-@import 'sidebar';
-@import 'modal';
+@import 'global';
 @import 'header';
-@import 'dashboard';
-// @import 'bootswatch';
+@import 'login';
+@import 'shared';
+@import 'statistics';
+@import 'drag-drop';
+@import 'review';
+@import 'share-popup';
+@import 'save-popup';
+@import 'drafts';
+@import 'thank-you';
+@import 'submit-popup';
+@import 'builder';
+@import 'rich-text';
+@import 'cards';
+@import 'nav-sidebar';
+@import 'sub-header';
+@import 'single-choice';
+@import 'page';
+@import 'dynamic-form';
+@import 'textQuestion';

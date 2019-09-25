@@ -1,0 +1,48 @@
+.#{$prefix} {
+    &-modal-share {
+        display: block;
+        position: relative;
+
+        &-body {
+            margin: auto;
+            width: 95%;
+
+            &-modal-warning {
+                color: red;
+                margin: 5px 0px;
+            }
+        }
+    }
+
+    &-emails {
+        margin: 5px 0px;
+    }
+
+    &-popup-search {
+        margin-left: 10px;
+    }
+
+    &-select-all {
+        margin-top: 12px;
+        margin-left: 11px;
+    }
+
+    &-scroll {
+        padding: 5px 10px;
+        border: 2px solid #ccc;
+        width: 100%;
+        height: 150px;
+        overflow-y: scroll;
+    }
+
+    &-search-lenght {
+        width: 95%;
+        background-color: #f9f9f7;
+        box-sizing: border-box;
+    }
+    
+}
+
+#toast-container>.toast-success {
+    background-color: $primary;
+}

@@ -1,0 +1,19 @@
+<div class="mod">
+    <div class="modal fb-modal-share">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title ">Save this form?</h5>
+            </div>
+            <div class="modal-body fb-modal-share-body ">
+                <div class="fb-content">
+                    <p>Are you sure you want to save this form in draft?</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" (click)="saveForm();bsModalRef.hide()">Yes</button>
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal"
+                    (click)="bsModalRef.hide()">No</button>
+            </div>
+        </div>
+    </div>
+</div>

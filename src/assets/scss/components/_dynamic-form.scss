@@ -1,0 +1,8 @@
+.#{$prefix} {
+    &-wrapQuestion {
+      padding: 35px;
+      @include breakpoint(xs) {
+        padding: 0px
+      }
+    }
+}

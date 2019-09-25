@@ -1,0 +1,123 @@
+.#{$prefix} {
+
+    &-title{
+        word-break: break-all;
+    }
+
+    &-page-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+
+    &-question-block {
+        background-color: $background-light;
+        padding: 20px;
+        margin-bottom: 15px;
+        word-break: break-all;
+
+        &-label{
+            padding-bottom: 6px;
+        }
+
+        &-control{
+            padding: 0;
+        }
+
+        &-textarea {
+            width: 85%;
+            height: 15vh;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            border:1px solid $secondary;
+            &-review{
+              width: 85%;
+              height: 15vh;
+              margin-left: 50%;
+              transform: translateX(-50%);
+              border:1px solid $secondary;
+            }
+        }
+       
+    }
+
+    &-float-right {
+        float: right;
+    }
+
+    &-points{
+        padding: 1%;
+        float: right;
+        @include breakpoint(xs){
+            position: relative;
+            bottom: 40px;
+        }
+    }
+
+    &-points-total{
+        font-weight: 500;
+        padding: 1%;
+        @include breakpoint(xs){
+            bottom: 0px;
+        }
+    }
+
+    &-total{
+        padding-left: 20px;
+        font-weight: 500;
+        &-p{
+            font-size: 20px;
+            position: relative;
+            bottom: -7px;
+        }
+    }
+
+    &-back{
+        margin-top: 2%;
+        margin-bottom: 6%;
+    }
+
+    &-reviewImg{
+        margin-bottom: 30px;
+        max-height: 250px;
+        margin-left: 50px;
+        margin-top: -20px;
+        &-question{
+            margin-bottom: 20px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            max-height: 250px;
+            max-width: 100%;
+        }
+        @include breakpoint(sm){
+            max-width: 80%;
+        }
+        @include breakpoint(xs){
+            max-width: 70%;
+            margin-top: -20px;
+        }
+    }
+    
+    &-wrong{
+        text-align: center;
+        width: 100%;
+        margin-top: 20vh;
+        i{
+            font-size: 175px;
+            color: $primary;
+            padding-bottom: 50px;
+        }
+        p{
+            color: $primary;
+        }
+        h4{
+            color: $primary;
+        }
+    }
+}
+
+
+
+
+

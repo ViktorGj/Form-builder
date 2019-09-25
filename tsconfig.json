@@ -11,11 +11,12 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
+    // "noImplicitAny": true,
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "es2017",
       "dom"
     ]
   }

@@ -1,0 +1,91 @@
+<!-- Edit question view -->
+<div [formGroup]="checkBoxForm" (cdkDropListDropped)="drop($event)" *ngIf="editQuestion == true">
+  <i class="far fa-check-square fa-img fb-fa-icon text-primary"> </i> <span> Multiple Choice Question</span>
+  <div class="row">
+    <ckeditor class="col-md-10" type="inline" formControlName="name" [config]="configToolbar"></ckeditor>
+    <label class="col-md-2 fb-icons-size far mt-1 fa-images ">
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" name="" class=" form-control fb-btn-hide" />
+    </label>
+  </div>
+
+  <div class="row">
+    <div class="fb-upload-view col-md-12">
+      <img *ngIf="checkBoxForm.value.imageLink" class="fb-img-title img-fluid" src="{{ checkBoxForm.value.imageLink }}">
+      <i class="fa fa-times remove-image-sign"
+        *ngIf="checkBoxForm.value.imageLink != '' && checkBoxForm.value.imageLink != null"
+        (click)="removeImg(checkBoxForm.value.imageId)" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div cdkDropList (cdkDropListDropped)="drop($event)" class="option-boundary fb-options-wrap">
+    <div formArrayName="options" *ngFor="let item of checkBoxForm.get('options').controls; let i = index"
+      cdkDragLockAxis="y" cdkDragBoundary=".option-boundary" cdkDrag>
+      <div [formGroupName]="i">
+        <div class="row fb-option-row">
+          <div *cdkDragPreview class="preview"></div>
+          <div class="form-group col-lg-6  col-md-6 col-sm-6 fb-col-xs fb-col-xs-option">
+            <label class="fb-question fb-question-font" for="textName">Type your option </label>
+            <ckeditor type="inline" formControlName="name" [config]="configToolbar"></ckeditor>
+          </div>
+
+          <div class="fb-image-upload col-lg-1 col-md-1 col-sm-1 fb-col-xs fb-col-xs-img">
+            <label class="far fa-images fb-icons-size">
+              <input type="file" (change)="onFileSelectedOption($event, item)" accept="image/*" name=""
+                class="form-control fb-btn-hide" />
+            </label>
+          </div>
+
+          <div class="form-group col-lg-2 col-md-2 col-sm-2 fb-col-xs fb-col-xs-points">
+            <label class="fb-question fb-question-font" for="textName">Type points</label>
+            <input type="text" formControlName="points" (keypress)="numberOnly($event,$event.target.value)"
+              (change)="onPointsFocusOut($event.target.value, i)" (paste)="$event.preventDefault()"
+              class="fb-points-size form-control" />
+          </div>
+
+          <div class="fb-btn-positions col-lg-2 col-md-2 col-sm-2 fb-col-xs">
+            <i class="far fa-trash-alt text-danger fb-icons-size"
+              (click)="removeImgOption(item, item.value.imageId); deleteOption(i)"></i>
+            <i class="fas fa-arrows-alt-v text-secondary fb-icons-size" cdkDragHandle></i>
+          </div>
+
+          <div class="fb-upload-view col-md-12" *ngIf="item.value.imageLink">
+            <img class="fb-img-options" src="{{ item.value.imageLink }}" />
+            <i class="fa fa-times remove-image-sign" *ngIf=" item.value.imageLink != false"
+              (click)="removeImgOption(item, item.value.imageId)" aria-hidden="true"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="fb-add text-primary" (click)="addOption()">
+      <i class="fas fa-plus "></i> <span> Add</span>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="pleaseWait" class="background-change"></div>
+<div *ngIf="pleaseWait" class="loading">
+  <img src="./../../../../../../../assets/img/Spinner2.svg">
+  <p><strong> Uploading... </strong></p>
+</div>
+<div class="mt-5">
+  <i (click)="onEdit()" class="far fa-save text-primary fb-state-question" *ngIf="editQuestion"></i>
+  <i (click)="onEdit()" class="far fa-edit text-primary fb-state-question" *ngIf="!editQuestion"></i>
+</div>
+
+<!-- Dropped question view -->
+<div class="cont ml-4 mb-4" *ngIf="editQuestion == false">
+  <h4 class="text-left text-primary" [innerHTML]="checkBoxForm.controls.name.value"></h4>
+  <img src="{{ checkBoxForm.value.imageLink }}" class="preview-image" />
+  <div class="preview col-md-8 text-left" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let item of checkBoxForm.controls.options.controls; let i = index">
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input text-left" id="{{ item.value.name + i }}" disabled />
+        <label class="custom-control-label text-left" for="{{ item.value.name + i }}">
+          <span class="fb-text-options" [innerHTML]="item.value.name"></span>
+        </label>
+      </div>
+      <img src="{{item.value.imageLink}}" *ngIf="item.value.imageLink" class="preview-image" />
+    </div>
+  </div>
+</div>

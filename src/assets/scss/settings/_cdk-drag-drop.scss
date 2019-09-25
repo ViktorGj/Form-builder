@@ -1,0 +1,41 @@
+.cdk-drag-placeholder {
+    width: 100%;
+}
+
+.cdk-drag-animating {
+    transition: transform 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drop-list-dragging .cdk-drag {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 100ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.fb-dynamic-form-elements-card {
+    & .cdk-drag-preview {
+        opacity: 0;
+    }
+}
+
+.fb-options-wrap {
+     .cdk-drag-preview {
+        opacity: 0;
+    }
+}
+
+.example-box:last-child {
+    border: none;
+}
+
+.fb-dynamic-form-elements {
+    .cdk-drop-list-dragging .cdk-drag {
+        width: 80%;
+    }
+}
+
+.preview {
+  width: 100%;
+  padding: 15px;
+}

@@ -1,0 +1,49 @@
+.#{$prefix} {
+    &-bg {
+        height: 100vh;
+        background: #e9e9e9;
+    }
+
+    &-top-margin {
+
+        @include breakpoint(lg) {
+            margin-top: 80px;
+            margin-left: -20px;
+        }
+
+        @include breakpoint(md) {
+            margin-top: 80px;
+            margin-left: 90px;
+        }
+
+        @include breakpoint(sm) {
+            margin-top: 80px;
+            margin-left: 90px;
+        }
+
+        @include breakpoint(xs) {
+            margin-top: 80px;
+            margin-left: 0px;
+        }
+    }
+
+    &-space-evenly {
+        justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
+    }
+
+    @include breakpoint(xs) {
+        flex-direction: row;
+    }
+}
+
+
+@supports  (-ms-flow-from: thingy) {
+    /* Edge only */
+
+    .fb-space-evenly {
+        justify-content: space-around;
+        /* you can also add some other adjustments to size, margins etc to get the same positioning */
+    }
+
+}

@@ -1,0 +1,65 @@
+.#{$prefix} {
+    &-login {
+        margin: 150px auto;
+        width: 300px;
+        display: block;
+
+        @include breakpoint(xs) {
+            width: 100%;
+        }
+
+        &-error {
+            text-align: center;
+            color: #f30000;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        @include breakpoint(sm) {
+            left: 48%;
+            top: 40%;
+        }
+
+        @include breakpoint(xs) {
+            width: 300px;
+        }
+    }
+
+    &-login-wrap-xs {
+        @include breakpoint(xs) {
+            width: 80%;
+        }
+    }
+
+    &-center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 50%);
+
+        @include breakpoint(xs) {
+            left: 52%;
+            top: 37%;
+        }
+    }
+
+    &-form-placeholder {
+        input::placeholder {
+            color: #afafaf;
+        }
+    }
+
+
+    &-logo {
+        color: #008290;
+        font-size: 32px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+
+    &-label {
+        color: #808080;
+    }
+
+}

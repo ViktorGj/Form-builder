@@ -1,0 +1,122 @@
+.app {
+    width: 400px;
+    height: auto;
+    background-color: yellowgreen;
+}
+
+
+.#{$prefix}-sidebar {
+    background-color: $secondary;
+    height: 92vh;
+
+    &-title {
+        text-align: center;
+        border-bottom: 1px solid black;
+    }
+
+    .#{$prefix}-btn-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .#{$prefix}-row {
+        margin: 0;
+    }
+
+    // LEFT EMPTY SIDEBAR
+    .#{$prefix}-sidebar-empty {
+        height: 92vh;
+    }
+
+    // MAIN CONTAINER
+    .#{$prefix}-main {
+        height: 92vh;
+
+        &-title {
+            margin: 7px 8%;
+        }
+
+        .todo-container {
+            width: 70%;
+            min-height: 700px;
+            border: 3px dotted black;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .list {
+                min-height: 700px;
+
+                .info-desc {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: 1px solid black;
+                    padding: 5px;
+
+                    &-title {
+                        text-align: center;
+                    }
+
+                    &-icon {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 45px;
+                    }
+                }
+            }
+        }
+    }
+
+    // END OF MAIN CONTAINER
+
+    // RIGHT SIDEBAR
+    .#{$prefix}-sidebar {
+        background-color: #B8DBD9;
+        height: 92vh;
+
+        &-title {
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+
+        .#{$prefix}-btn-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // right sidebar cards
+    .cards-row {
+        margin: 0;
+
+        .card-wrap {
+            padding: 5px;
+
+            .card-drag-drop {
+                padding: 5px;
+
+                &-title {
+                    text-align: center;
+                    font-size: 20px;
+                    display: block;
+                }
+
+                &-icon {
+                    font-size: 45px;
+                    text-align: center;
+                }
+
+                &:hover {
+                    border: 1px solid $primary;
+                }
+            }
+        }
+    }
+    // END OF RIGHT SIDEBAR
+
+}

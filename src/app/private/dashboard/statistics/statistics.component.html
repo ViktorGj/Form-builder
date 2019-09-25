@@ -1,0 +1,29 @@
+<app-sub-header class="text-primary fb-sub-stats-xs">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Statistics</h2>
+      <p class="fb-statistic-title" [innerHTML]="title"></p>
+    </div>
+
+    <button type="button" class="btn btn-primary fb-btn-stat-align-sm"
+      [routerLink]="['/dashboard/shared']">Back</button>
+
+  </div>
+</app-sub-header>
+
+<div class="col-md-12 fb-statistic-wrap" *ngFor="let form of formStatistics">
+  <div class="card fb-card-stat my-2">
+    <div class="card-body fb-content-split">
+      <div class="fb-left">
+        <p>{{form.userName}}</p>
+        <p *ngIf="form.submitted == true">Finished: <span><i class="fa fa-check fb-fa-check fb-correct"></i></span></p>
+        <p *ngIf="form.submitted == false">Finished: <span><i class="fa fa-times fb-incorrect"></i></span></p>
+
+      </div>
+      <div class="fb-right">
+        <p>Score: <span>{{form.scoredPoints}} / {{form.totalPoints}}</span></p>
+      </div>
+      <button class="btn btn-primary fb-btn-view" (click)="navigateUserReview(form.submissionId)">View</button>
+    </div>
+  </div>
+</div>

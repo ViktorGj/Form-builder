@@ -1,0 +1,75 @@
+.#{$prefix} {
+    &-content-split {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include breakpoint(xs){
+            display: block;
+            padding: 10px;
+
+        }
+    }
+
+    &-statistic {
+        &-title {
+            word-wrap: break-word;
+            width: 90%;
+        }
+    }
+
+    &-btn-stat-align-sm {
+        position: absolute;
+        right: 0px;
+        top: 40px;
+        @include breakpoint(xs){
+            top: 5px;
+            left: 100%;
+            width: 60px;
+        }
+    }
+
+    &-card-stat {
+        @include breakpoint(xs) {
+            width: 90%;
+        }
+    }
+
+    &-sub-stats-xs {
+        position: relative;
+        display: block;
+        padding-left: 20px;
+
+        @include breakpoint(md) {
+            display: block;
+            margin: 0px 20px;
+        }
+
+        @include breakpoint(xs) {
+            margin: 0px 55px;
+            display: block;
+        }
+    }
+
+    &-statistic-wrap {
+        @include breakpoint(xs) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &-btn-view {
+        position: absolute;
+        right: 18px;
+        bottom: 14px;
+    }
+
+    &-correct{
+        color: $success;
+    }
+
+    &-incorrect{
+        color: $danger;
+    }
+
+}

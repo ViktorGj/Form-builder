@@ -1,0 +1,63 @@
+.#{$prefix} {
+  // Title and icons
+    &-text-title {
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: 15px;
+      padding-right: 15px;
+      box-sizing: border-box;
+      @include breakpoint(sm) {
+        padding: 0;
+      }
+      
+      &-input {
+        padding: 0px 15px 0px 15px;
+        width: 80%;
+        @include breakpoint(sm) {
+          padding: 0;
+        }
+      }
+  
+      &-icons-size {
+          width: 20%;
+          font-size: 25px;
+      }
+    }
+  // Image area
+    &-image-container {
+      margin-top: 20px;
+      width: 80%;
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+  
+      &-size {
+        max-height: 250px;
+        max-width: 80%;
+        @include breakpoint(sm) {
+          max-width: 95%;
+        }
+      }
+      &-remove {
+        position: absolute;
+        margin-left: 1%;
+        color: $danger ;
+      }
+    }
+  
+    &-loader {
+      position: fixed;
+      left: 40%;
+      top: 50%;
+      color: $primary;
+      z-index: 1000;
+      &-img {
+        height: 150px;
+      }
+    }
+  }
+  
+  // Edit/save button
+  .#{$prefix}-btn-size {
+    width: 120px
+  }
